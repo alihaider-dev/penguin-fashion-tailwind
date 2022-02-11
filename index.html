@@ -29,13 +29,14 @@
         <div class="container mx-auto sm:flex items-center justify-around">
           <div class="space-y-4">
             <h1 class="text-4xl sm:text-5xl uppercase font-extrabold">
-              <span class="text-yellow-400">be the penguin</span>
+              <span id="title" class="text-yellow-400">be the penguin</span>
               <br />
               <span>of winter</span>
             </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <!-- Buy Now button -->
             <button
+              id="buy-now"
               class="rounded uppercase bg-lime-500 font-semibold text-white py-3 px-5"
             >
               <svg
@@ -161,5 +162,13 @@
         </div>
       </section>
     </main>
+
+    <script>
+      document.getElementById('buy-now').addEventListener('click', function () {
+        let title = document.getElementById('title');
+        let changTitle = title;
+        changTitle.innerText = 'I am penguin';
+      });
+    </script>
   </body>
 </html>
